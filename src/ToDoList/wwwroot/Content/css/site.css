@@ -1,0 +1,66 @@
+﻿html,body{
+    min-height: 100%;
+}
+
+body{
+    /* background-image: radial-gradient(mintcream 0%, gray 100%); */
+    font-family: "Trebuchet MS";
+}
+
+.todo-list{
+    width: 300px;
+    margin: 50px auto;
+    border-top: solid 1px #c0c0c0;
+    border-left: solid 1px #c0c0c0;
+    border-right: solid 1px #c0c0c0;
+    background: white;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    bottom: 6px;
+    right: 12px;
+    float: right;
+}
+
+.completed-True {
+    background: #d7ffbf;
+    text-decoration:line-through;
+}
+
+.header{
+    text-align: center;
+    padding: 15px;
+    background: #f0f0f0;
+    border-bottom: solid 1px #c0c0c0;
+}
+
+ol {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    padding: 15px;
+    border-bottom: solid 1px #c0c0c0;
+}
+
+.form{
+    text-align:center;
+    width: 300px;
+    margin: 50px auto;
+    border-top: solid 1px #c0c0c0;
+    border-left: solid 1px #c0c0c0;
+    border-right: solid 1px #c0c0c0;
+    background: white;
+}
+
+.form-controls{
+    padding: 15px;
+    border-bottom: solid 1px #c0c0c0;
+}
+
+input {
+    margin: 10px;
+}

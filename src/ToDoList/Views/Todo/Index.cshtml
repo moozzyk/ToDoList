@@ -1,0 +1,31 @@
+﻿@model ToDoList.Models.ToDoModel
+@{
+    ViewBag.Title = "TODO list";
+}
+
+<div class="form">
+    <div class="header"><span>Create a new TODO item</span></div>
+    <div class="form-controls">
+        @using (Html.BeginForm("NewToDoItem", "Todo", FormMethod.Post))
+        {
+            @Html.TextBoxFor(m => m.NewItemName, new Dictionary<string, object> { { "placeholder", "Enter task name" } })
+            <input type="submit" class="btn" value="Create new item" />
+        }
+    </div>
+</div>
+
+<div class="todo-list">
+    <div class="header"><span>TODO items</span></div>
+
+    <ol>
+        @foreach (var item in Model.Items)
+        {
+            <li class="completed-@item.Completed">
+                @using (Html.BeginForm("ToggleCompleted", "Todo", new { id = item.Id },  FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    <div><label>@item.Task</label>@Html.CheckBoxFor(m => item.Completed, new { onclick = "this.form.submit();" })</div>
+                }
+            </li>
+        }
+    </ol>
+</div>
