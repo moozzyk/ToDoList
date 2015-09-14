@@ -21,6 +21,7 @@ namespace ToDoList
                 configBuilder.AddUserSecrets();
             }
 
+
             configBuilder.AddEnvironmentVariables();
             Configuration = configBuilder.Build();
         }
