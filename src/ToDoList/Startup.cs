@@ -33,7 +33,7 @@ namespace ToDoList
             services
                 .AddEntityFramework()
                 .AddSqlServer()
-                .AddDbContext<ToDoContext>(options => options.UseSqlServer(Configuration["SQLAZURECONNSTR_ToDoListDb"]));
+                .AddDbContext<ToDoContext>(options => options.UseSqlServer(Configuration["Data:ToDoListDb:ConnectionString"]));
         }
 
         public void Configure(IApplicationBuilder app)
